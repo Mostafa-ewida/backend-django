@@ -1,0 +1,14 @@
+# General
+# ------------------------------------------------------------------------------
+USE_DOCKER=yes
+IPYTHONDIR=/app/.ipython
+# Redis
+# ------------------------------------------------------------------------------
+REDIS_URL=redis://redis:6379/0
+
+# Celery
+# ------------------------------------------------------------------------------
+
+# Flower
+CELERY_FLOWER_USER=EAiCJjeDufNlmSFPzCKQUfusTFePNFbr
+CELERY_FLOWER_PASSWORD=ZNpEir6qZKYUoRUI4TUcQ12oOuczgpon9S0WnJ0Q0IJ91yXQ5BxIsY7AlBKrYe6T
