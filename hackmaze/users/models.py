@@ -3,7 +3,7 @@ from django.db.models import CharField, EmailField
 from django.urls import reverse
 from django.utils.translation import gettext_lazy as _
 
-from hackmake_backend.users.managers import UserManager
+from hackmaze.users.managers import UserManager
 from django.utils.translation import gettext as _
 
 from django.db import models
@@ -65,9 +65,9 @@ class UserProfile(models.Model):
     """
     country: django country filed
     TODO: use https://pypi.org/project/django-countries/ instead
-    XXX: use ip_forword_x to get it's country 
+    XXX: use ip_forword_x to get it's country
     website_admin (is_staff)
-    
+
     """
 
     @property
