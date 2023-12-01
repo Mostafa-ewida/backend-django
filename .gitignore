@@ -272,7 +272,7 @@ tags
 dump.rdb
 
 ### Project template
-hackmake_backend/media/
+hackmaze/media/
 
 .pytest_cache/
 .ipython/

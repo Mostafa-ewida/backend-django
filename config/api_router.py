@@ -1,7 +1,7 @@
 from django.conf import settings
 from rest_framework.routers import DefaultRouter, SimpleRouter
 
-from hackmake_backend.users.api.views import UserViewSet
+from hackmaze.users.api.views import UserViewSet
 
 if settings.DEBUG:
     router = DefaultRouter()

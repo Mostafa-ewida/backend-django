@@ -1,6 +1,6 @@
-# Translations for the hackmake backend project
-# Copyright (C) 2023 Daniel Roy Greenfeld
-# Daniel Roy Greenfeld <daniel-roy-greenfeld@example.com>, 2023.
+# Translations for the hackmaze project
+# Copyright (C) 2023 Yusuf Adel
+# Yusuf Adel <yusufadell.dev@gmail.com>, 2023.
 #
 #, fuzzy
 msgid ""

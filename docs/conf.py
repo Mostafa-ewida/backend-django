@@ -27,9 +27,9 @@ django.setup()
 
 # -- Project information -----------------------------------------------------
 
-project = "hackmake backend"
-copyright = """2023, Daniel Roy Greenfeld"""
-author = "Daniel Roy Greenfeld"
+project = "hackmaze"
+copyright = """2023, Yusuf Adel"""
+author = "Yusuf Adel"
 
 
 # -- General configuration ---------------------------------------------------

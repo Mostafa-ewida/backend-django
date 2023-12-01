@@ -24,8 +24,8 @@ if __name__ == "__main__":
         raise
 
     # This allows easy placement of apps within the interior
-    # hackmake_backend directory.
+    # hackmaze directory.
     current_path = Path(__file__).parent.resolve()
-    sys.path.append(str(current_path / "hackmake_backend"))
+    sys.path.append(str(current_path / "hackmaze"))
 
     execute_from_command_line(sys.argv)
