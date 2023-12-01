@@ -5,17 +5,10 @@ from django.utils.translation import gettext_lazy as _
 
 from hackmaze.users.managers import UserManager
 from django.utils.translation import gettext as _
-
 from django.db import models
 
 
-class TimeStampModel(models.Model):
-    # TODO: use https://django-model-utils.readthedocs.io/en/latest/ instead
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-
-    class Meta:
-        abstract = True
+from hackmaze.custom_models import AbstractModel
 
 
 class User(AbstractUser):
@@ -47,7 +40,7 @@ class User(AbstractUser):
         return reverse("users:detail", kwargs={"pk": self.id})
 
 
-class UserProfile(models.Model):
+class UserProfile(AbstractModel):
     user = models.OneToOneField(
         User,
         on_delete=models.CASCADE,
