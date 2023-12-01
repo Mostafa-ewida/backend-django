@@ -1,14 +1,11 @@
 from django.contrib.auth.models import AbstractUser
+from django.db import models
 from django.db.models import CharField, EmailField
 from django.urls import reverse
 from django.utils.translation import gettext_lazy as _
 
 from hackmaze.users.managers import UserManager
-from django.utils.translation import gettext as _
-from django.db import models
-
-
-from hackmaze.custom_models import AbstractModel
+from hackmaze.users.model_mixins import UserProfileMixin
 
 
 class User(AbstractUser):
@@ -40,7 +37,7 @@ class User(AbstractUser):
         return reverse("users:detail", kwargs={"pk": self.id})
 
 
-class UserProfile(AbstractModel):
+class UserProfile(UserProfileMixin):
     bio = models.TextField(null=True, blank=True)
     blog_url = models.URLField(max_length=255, null=True, blank=True)
     exp_level = models.IntegerField()
@@ -60,7 +57,6 @@ class UserProfile(AbstractModel):
     TODO: use https://pypi.org/project/django-countries/ instead
     XXX: use ip_forword_x to get it's country
     website_admin (is_staff)
-
     """
 
     @property
