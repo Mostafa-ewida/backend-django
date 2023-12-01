@@ -5,7 +5,7 @@ boto3==1.26.79
 click==8.1.3
 click-didyoumean==0.3.0
 click-plugins==1.1.1
-click-repl==0.3.0
+click-repl==0.2.0
 colorama==0.4.4
 cx-Oracle==8.3.0
 Deprecated==1.2.13
@@ -39,7 +39,7 @@ django-taggit==5.0.1
 
 
 django-celery-beat==2.5.0
-django-celery-results==2.5.1
+django-celery-results==2.4.0
 django-colorfield==0.10.1
 django-extensions==3.1.0
 
@@ -76,10 +76,10 @@ pycryptodome==3.17
 pyparsing==3.0.9
 python-crontab==2.6.0
 python-dateutil==2.8.2
-pytz==2023.3.post1
+pytz==2023.3
 pyyaml-env-tag==0.1
 requests==2.27.1
-sentry-sdk==1.38.0  # https://github.com/getsentry/sentry-python
+sentry-sdk==1.5.11  # https://github.com/getsentry/sentry-python
 six==1.16.0
 sqlparse==0.4.2
 tornado==6.1
