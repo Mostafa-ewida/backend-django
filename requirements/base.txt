@@ -49,7 +49,6 @@ django-import-export==3.3.3
 django-jsonform==2.21.0
 django-redis==5.4.0
 django-solo==2.1.0
-django-storages==1.12.3
 django-timezone-field==6.1.0
 django_filter==2.4.0
 django-silk==5.0.4
@@ -73,7 +72,6 @@ pandas==1.5.3
 
 prometheus-client==0.14.1
 prompt-toolkit==3.0.29
-psycopg2==2.9.3  # https://github.com/psycopg/psycopg2
 pycryptodome==3.17
 pyparsing==3.0.9
 python-crontab==2.6.0
