@@ -52,10 +52,16 @@ if env("USE_DOCKER") == "yes":
 # django-extensions
 # ------------------------------------------------------------------------------
 # https://django-extensions.readthedocs.io/en/latest/installation_instructions.html#configuration
-INSTALLED_APPS += ["django_extensions"]  # noqa: F405
+INSTALLED_APPS += [
+    "django_extensions",
+    "silk",
+]  # noqa: F405
 # Celery
 # ------------------------------------------------------------------------------
 
+MIDDLEWARE += [
+    "silk.middleware.SilkyMiddleware",
+]
 # https://docs.celeryq.dev/en/stable/userguide/configuration.html#task-eager-propagates
 CELERY_TASK_EAGER_PROPAGATES = True
 # Your stuff...

@@ -41,20 +41,20 @@ class User(AbstractUser):
 
 
 class UserProfile(AbstractModel):
+    bio = models.TextField(null=True, blank=True)
+    blog_url = models.URLField(max_length=255, null=True, blank=True)
+    exp_level = models.IntegerField()
+    github_url = models.URLField(max_length=255, null=True, blank=True)
+    job = models.CharField(max_length=255)
+    linkedin_url = models.URLField(max_length=255, null=True, blank=True)
+    rank = models.IntegerField(_("User rank accross the platform"))
+    twitter_url = models.URLField(max_length=255, null=True, blank=True)
+
     user = models.OneToOneField(
         User,
         on_delete=models.CASCADE,
         primary_key=True,
     )
-    exp_level = models.IntegerField()
-    rank = models.IntegerField(_("User rank accross the platform"))
-    bio = models.TextField(null=True, blank=True)
-    github_url = models.URLField(max_length=255, null=True, blank=True)
-    linkedin_url = models.URLField(max_length=255, null=True, blank=True)
-    twitter_url = models.URLField(max_length=255, null=True, blank=True)
-    personal_blog = models.URLField(max_length=255, null=True, blank=True)
-    job = models.CharField(max_length=255)
-
     """
     country: django country filed
     TODO: use https://pypi.org/project/django-countries/ instead
