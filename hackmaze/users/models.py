@@ -38,9 +38,20 @@ class User(AbstractUser):
 
 
 class UserProfile(UserMixin):
+    BEGINNER = "Beginner"
+    INTERMEDIATE = "Intermediate"
+    ADVANCED = "Advanced"
+    EXPERT = "Expert"
+
+    EXP_LEVEL_CHOICES = [
+        (BEGINNER, "Beginner"),
+        (INTERMEDIATE, "Intermediate"),
+        (ADVANCED, "Advanced"),
+        (EXPERT, "Expert"),
+    ]
     bio = models.TextField(null=True, blank=True)
     blog_url = models.URLField(max_length=255, null=True, blank=True)
-    exp_level = models.IntegerField()
+    exp_level = models.CharField(max_length=20, choices=EXP_LEVEL_CHOICES, default=BEGINNER)
     github_url = models.URLField(max_length=255, null=True, blank=True)
     job = models.CharField(max_length=255)
     linkedin_url = models.URLField(max_length=255, null=True, blank=True)
