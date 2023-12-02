@@ -2,17 +2,12 @@ from django.apps import AppConfig
 from django.utils.translation import gettext_lazy as _
 
 
-class QuestionsConfig(AppConfig):
+class RoomsConfig(AppConfig):
     default_auto_field = "django.db.models.BigAutoField"
-    name = _("hackmaze.questions")
-
-
-class UsersConfig(AppConfig):
-    name = "hackmaze.users"
-    verbose_name = _("Users")
+    name = _("hackmaze.rooms")
 
     def ready(self):
         try:
-            import hackmaze.questions.signals  # noqa: F401
+            import hackmaze.rooms.signals  # noqa: F401
         except ImportError:
             pass
