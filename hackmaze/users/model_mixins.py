@@ -1,5 +1,5 @@
-from model_utils.models import TimeStampedModel, UUIDModel
+from model_utils.models import SoftDeletableModel, TimeStampedModel, UUIDModel
 
 
-class UserMixin(TimeStampedModel, UUIDModel):
+class UserMixin(TimeStampedModel, UUIDModel, SoftDeletableModel):
     ...
