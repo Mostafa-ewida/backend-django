@@ -274,7 +274,7 @@ dump.rdb
 ### Project template
 hackmaze/media/
 
-/*/migrations/0*
+/**/migrations/0*
 mydatabase
 
 .pytest_cache/
