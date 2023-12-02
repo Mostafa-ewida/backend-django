@@ -5,7 +5,7 @@ from django.urls import reverse
 from django.utils.translation import gettext_lazy as _
 
 from hackmaze.users.managers import UserManager
-from hackmaze.users.model_mixins import UserProfileMixin
+from hackmaze.users.model_mixins import UserMixin
 
 
 class User(AbstractUser):
@@ -37,7 +37,7 @@ class User(AbstractUser):
         return reverse("users:detail", kwargs={"pk": self.id})
 
 
-class UserProfile(UserProfileMixin):
+class UserProfile(UserMixin):
     bio = models.TextField(null=True, blank=True)
     blog_url = models.URLField(max_length=255, null=True, blank=True)
     exp_level = models.IntegerField()
