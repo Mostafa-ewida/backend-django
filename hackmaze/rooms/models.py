@@ -1,16 +1,15 @@
 from django.db import models
 from taggit.managers import TaggableManager
 
-from hackmaze.users.models import UserProfile as Author
+from hackmaze.users.models import User
 
 from .constants import DIFFICULTY_CHOICES, MACHINE, PUBLIC, TYPE_CHOICES, VISIBILITY_CHOICES
 
 
-# Create your models here.
 class Room(models.Model):
     title = models.CharField(max_length=255)
     description = models.TextField(blank=True)
-    author = models.ForeignKey(Author, on_delete=models.CASCADE)
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
     is_active = models.BooleanField(default=True)
     room_type = models.CharField(max_length=10, choices=TYPE_CHOICES, default=MACHINE)
     visibility = models.CharField(max_length=10, choices=VISIBILITY_CHOICES, default=PUBLIC)
@@ -34,7 +33,7 @@ class Collection(models.Model):
 class Module(models.Model):
     title = models.CharField(max_length=255)
     description = models.TextField(blank=True)
-    author = models.ForeignKey(Author, on_delete=models.CASCADE)
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
     level = models.IntegerField()
     is_active = models.BooleanField(default=False)
     collections = models.ManyToManyField(Collection)
