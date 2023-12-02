@@ -3,8 +3,8 @@ from django.utils.translation import gettext_lazy as _
 
 
 class RoomsConfig(AppConfig):
-    default_auto_field = "django.db.models.BigAutoField"
-    name = _("hackmaze.rooms")
+    name = "hackmaze.rooms"
+    verbose_name = _("Rooms")
 
     def ready(self):
         try:
