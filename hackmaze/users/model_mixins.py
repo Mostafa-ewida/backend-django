@@ -1,6 +1,6 @@
-from model_utils.models import SoftDeletableModel, TimeStampedModel, UUIDModel
+from model_utils.models import TimeStampedModel, UUIDModel
 
 
-class AbstractCoreModel(TimeStampedModel, UUIDModel, SoftDeletableModel):
+class AbstractCoreModel(TimeStampedModel, UUIDModel):
     class Meta:
         abstract = True

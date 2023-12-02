@@ -3,6 +3,7 @@ from django.db import models
 from django.db.models import CharField, EmailField
 from django.urls import reverse
 from django.utils.translation import gettext_lazy as _
+from model_utils.models import SoftDeletableModel
 
 from hackmaze.users.managers import UserManager
 from hackmaze.users.model_mixins import AbstractCoreModel
@@ -37,7 +38,7 @@ class User(AbstractUser):
         return reverse("users:detail", kwargs={"pk": self.id})
 
 
-class UserProfile(AbstractCoreModel):
+class UserProfile(AbstractCoreModel, SoftDeletableModel):
     BEGINNER = "Beginner"
     INTERMEDIATE = "Intermediate"
     ADVANCED = "Advanced"
