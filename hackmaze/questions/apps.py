@@ -3,13 +3,8 @@ from django.utils.translation import gettext_lazy as _
 
 
 class QuestionsConfig(AppConfig):
-    default_auto_field = "django.db.models.BigAutoField"
-    name = _("hackmaze.questions")
-
-
-class UsersConfig(AppConfig):
-    name = "hackmaze.users"
-    verbose_name = _("Users")
+    name = "hackmaze.questions"
+    verbose_name = _("Questions")
 
     def ready(self):
         try:
