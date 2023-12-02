@@ -5,7 +5,7 @@ from django.urls import reverse
 from django.utils.translation import gettext_lazy as _
 
 from hackmaze.users.managers import UserManager
-from hackmaze.users.model_mixins import UserMixin
+from hackmaze.users.model_mixins import AbstractCoreModel
 
 
 class User(AbstractUser):
@@ -37,7 +37,7 @@ class User(AbstractUser):
         return reverse("users:detail", kwargs={"pk": self.id})
 
 
-class UserProfile(UserMixin):
+class UserProfile(AbstractCoreModel):
     BEGINNER = "Beginner"
     INTERMEDIATE = "Intermediate"
     ADVANCED = "Advanced"
@@ -61,7 +61,6 @@ class UserProfile(UserMixin):
     user = models.OneToOneField(
         User,
         on_delete=models.CASCADE,
-        primary_key=True,
     )
     """
     country: django country filed

@@ -10,7 +10,7 @@ class Section(models.Model):
 
     title = models.CharField(max_length=255)
     description = models.TextField(blank=True)
-    room = models.ForeignKey(Room, on_delete=models.CASCADE, related_name="sections")
+    room = models.ForeignKey(Room, on_delete=models.CASCADE, null=True, blank=True)
     order = models.PositiveIntegerField()  # To determine the order of sections in a room
 
     def __str__(self):
