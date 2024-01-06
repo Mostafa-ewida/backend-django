@@ -72,7 +72,7 @@ pandas==1.5.3
 
 prometheus-client==0.14.1
 prompt-toolkit==3.0.29
-pycryptodome==3.17
+pycryptodome==3.19.1
 pyparsing==3.0.9
 python-crontab==2.6.0
 python-dateutil==2.8.2
